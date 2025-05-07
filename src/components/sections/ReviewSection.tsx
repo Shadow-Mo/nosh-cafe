@@ -13,7 +13,7 @@ const ReviewSection = () => {
     <section id="review" className="py-[5rem] px-[7%] bg-[url('/images/beans-bg.jpg')] bg-fixed bg-cover relative">
       <div className="absolute inset-0 bg-black/70"></div>
       <h1 className="heading text-center text-white uppercase pb-[3.5rem] text-[4rem] relative z-10 animate-fadeIn">
-        customer's <span className="text-[#d3ad7f] uppercase">review</span>
+        customer&apos;s <span className="text-[#d3ad7f] uppercase">review</span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] px-4 relative z-10">
@@ -32,7 +32,7 @@ const ReviewSection = () => {
                 className="quote mx-auto mb-6 opacity-60 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:scale-110"
               />
               <p className="text-[1.5rem] leading-[1.8] text-[#eee] py-[2rem] italic">
-                "The atmosphere at Nosh Cafe is unmatched! The baristas are skilled, attentive, and always ready to recommend something new. Their specialty coffee selection is outstanding, with beans sourced from around the world."
+                &ldquo;The atmosphere at Nosh Cafe is unmatched! The baristas are skilled, attentive, and always ready to recommend something new. Their specialty coffee selection is outstanding, with beans sourced from around the world.&rdquo;
               </p>
               <div className="relative mx-auto w-[9rem] h-[9rem] rounded-full border-4 border-[#d3ad7f] p-1 transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
                 <Image 
