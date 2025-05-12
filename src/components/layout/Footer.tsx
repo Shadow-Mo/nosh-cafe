@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <section className="footer bg-[#13131a] text-center pt-[4rem] pb-[2rem]">
-      <div className="container mx-auto max-w-7xl px-4 mb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left mb-10">
+    <section className="footer bg-[#13131a] justify-between items-center pt-[4rem] pb-[2rem]">
+      <div className="container mx-auto max-w-9xl px-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left mb-10">
           <div className="animate-fadeIn">
             <Image src="/images/logo.png" alt="Nosh Cafe" width={150} height={150} className="mb-4" />
             <p className="text-[1.6rem] text-gray-400 mb-4">Experience premium coffee in a cozy atmosphere with expert baristas and specialty brews.</p>
@@ -37,15 +37,15 @@ const Footer = () => {
           
           <div className="animate-fadeIn" style={{animationDelay: "200ms"}}>
             <h3 className="text-[2rem] text-white font-bold mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-1/4 after:h-[2px] after:bg-[#d3ad7f]">Opening Hours</h3>
-            <ul className="space-y-3">
-              <li className="text-[1.6rem] text-gray-400 flex justify-between">
-                <span>Monday - Friday:</span> <span className="text-[#d3ad7f]">8:00am - 9:00pm</span>
-              </li>
-              <li className="text-[1.6rem] text-gray-400 flex justify-between">
-                <span>Saturday:</span> <span className="text-[#d3ad7f]">8:00am - 10:30pm</span>
-              </li>
-              <li className="text-[1.6rem] text-gray-400 flex justify-between">
-                <span>Sunday:</span> <span className="text-[#d3ad7f]">9:00am - 8:00pm</span>
+            <ul className="space-y-2">
+              <li className="text-[1.6rem] text-gray-400 flex flex-col">
+                <span>Monday, 9:30 am–11:30 pm</span>
+                <span>Tuesday, 9:30 am–11:30 pm</span>
+                <span>Wednesday, 9:30 am–11:30 pm</span>
+                <span>Thursday, 9:30 am–11:30 pm</span>
+                <span>Friday, 9:30 am–11:30 pm</span>
+                <span>Saturday, 9:30 am–11:30 pm</span>
+                <span>Sunday, 9:30 am–11:30 pm</span>
               </li>
             </ul>
           </div>
@@ -55,11 +55,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="text-[1.6rem] text-gray-400 flex items-start">
                 <i className="fas fa-map-marker-alt text-[#d3ad7f] mt-1 mr-3"></i>
-                <span>123 Coffee Street, Mumbai, Maharashtra 400047, India</span>
+                <span>Hotel, Shop 127/2 Chaitraban Residency, Opp Gold’s Gym, Sarjaa, Road, Aundh, Pune, Maharashtra 411067</span>
               </li>
               <li className="text-[1.6rem] text-gray-400 flex items-center">
                 <i className="fas fa-phone text-[#d3ad7f] mr-3"></i>
-                <span>+91 1234567890</span>
+                <span>+91 9623863495</span>
               </li>
               <li className="text-[1.6rem] text-gray-400 flex items-center">
                 <i className="fas fa-envelope text-[#d3ad7f] mr-3"></i>

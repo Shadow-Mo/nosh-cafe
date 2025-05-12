@@ -14,8 +14,8 @@ export default function Home() {
       <MenuSection />
       <ProductsSection />
       <ReviewSection />
-      <ContactSection />
       <BlogsSection />
+      <ContactSection />
     </>
   );
 }

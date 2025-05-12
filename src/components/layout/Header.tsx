@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className="bg-[rgba(1,1,3,0.9)] backdrop-blur-sm flex items-center justify-between px-[7%] py-[1.5rem] border-b border-[var(--border)] fixed top-0 left-0 right-0 z-50 shadow-md">
       <Link href="/" className="logo transition-transform hover:scale-105">
-        <Image src="/images/logo.png" alt="Nosh Cafe" width={60} height={60} className="drop-shadow-lg" />
+        <Image src="/images/logo.png" alt="Nosh Cafe" width={50} height={50} className="drop-shadow-lg" />
       </Link>
 
       <nav className="hidden md:flex">
@@ -39,7 +39,7 @@ const Header = () => {
       </nav>
 
       <div className="flex items-center">
-        <div 
+        {/* <div 
           className="text-white cursor-pointer text-[2.5rem] ml-[2rem] hover:text-[#d3ad7f] transition-all transform hover:rotate-12" 
           onClick={toggleSearch}
         >
@@ -51,7 +51,7 @@ const Header = () => {
         >
           <i className="fas fa-shopping-cart" />
           <span className="absolute -top-2 -right-2 bg-[#d3ad7f] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">4</span>
-        </div>
+        </div> */}
         <Sheet>
           <SheetTrigger asChild>
             <div className="text-white cursor-pointer text-[2.5rem] ml-[2rem] hover:text-[var(--main-color)] md:hidden">
@@ -75,7 +75,7 @@ const Header = () => {
       </div>
 
       {/* Search Form */}
-      <div className={`absolute top-[115%] right-[7%] bg-white w-[50rem] h-[5rem] flex items-center transform origin-top ${isSearchOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'} transition-all duration-300 rounded-md shadow-lg`}>
+      {/* <div className={`absolute top-[115%] right-[7%] bg-white w-[50rem] h-[5rem] flex items-center transform origin-top ${isSearchOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'} transition-all duration-300 rounded-md shadow-lg`}>
         <input
           type="search"
           placeholder="search here..."
@@ -84,10 +84,10 @@ const Header = () => {
         <label className="cursor-pointer text-[2.2rem] mr-[1.5rem] text-[var(--black)] hover:text-[var(--main-color)]">
           <i className="fas fa-search" />
         </label>
-      </div>
+      </div> */}
 
       {/* Cart Items Container */}
-      <div className={`absolute top-[100%] ${isCartOpen ? 'right-0' : 'right-[-100%]'} h-[calc(100vh-9.5rem)] w-[35rem] bg-white p-0 px-[1.5rem] transition-all duration-300 shadow-lg overflow-y-auto`}>
+      {/* <div className={`absolute top-[100%] ${isCartOpen ? 'right-0' : 'right-[-100%]'} h-[calc(100vh-9.5rem)] w-[35rem] bg-white p-0 px-[1.5rem] transition-all duration-300 shadow-lg overflow-y-auto`}>
         {[1, 2, 3, 4].map((item) => (
           <div key={item} className="relative my-[2rem] flex items-center gap-[1.5rem]">
             <span className="absolute top-[1rem] right-[1rem] text-[2rem] cursor-pointer text-[var(--black)] hover:text-[var(--main-color)]">
@@ -103,7 +103,7 @@ const Header = () => {
         <Button className="w-full text-center mt-4 bg-[var(--main-color)] hover:opacity-90 text-[1.7rem] py-[0.9rem] hover:tracking-[0.2rem]">
           checkout now
         </Button>
-      </div>
+      </div> */}
     </header>
   );
 };

@@ -3,7 +3,44 @@
 import Image from "next/image";
 
 const MenuSection = () => {
-  const menuItems = [1, 2, 3, 4, 5, 6];
+  const menuItems = [
+    {
+      item: 'Panner Makhni',
+      image: '/images/nosh2.webp'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/nosh3.webp'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/nosh4.webp'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/sandwich.jpg'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/burger.jpg'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/rice.png'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/nosh6.jpg'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/nosh7.jpg'
+    },
+    {
+      item: 'Panner Makhni',
+      image: '/images/nosh8.jpg'
+    },
+  ];
 
   return (
     <section id="menu" className="py-[5rem] px-[7%] bg-[var(--bg)]">
@@ -15,27 +52,20 @@ const MenuSection = () => {
         {menuItems.map((item) => (
           <div 
             key={item} 
-            className="p-[5rem] text-center border border-[rgba(255,255,255,.3)] bg-[rgba(19,19,26,0.7)] hover:bg-white group transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl animate-slideInUp"
+            className="p-[2rem] text-center border border-[rgba(255,255,255,.3)] bg-[rgba(19,19,26,0.7)] hover:bg-white group transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl animate-slideInUp"
             style={{animationDelay: `${item * 100}ms`}}
           >
             <div className="p-0">
               <Image 
-                src={`/images/menu-${item}.png`} 
+                src={item.image} 
                 alt={`Menu Item ${item}`} 
-                width={100} 
-                height={100} 
-                className="h-[10rem] object-contain mx-auto"
+                width={800} 
+                height={800} 
+                className="h-[25rem] object-contain mx-auto rounded-xl"
               />
               <h3 className="text-white text-[2rem] py-[1rem] group-hover:text-[var(--black)] font-semibold transition-colors">
-                {item === 1 ? "Espresso" : item === 2 ? "Cappuccino" : item === 3 ? "Latte Art" : item === 4 ? "Macchiato" : item === 5 ? "Mocha" : "Cold Brew"}
+                {item.item}
               </h3>
-              <div className="text-white text-[2.5rem] py-[0.5rem] group-hover:text-[var(--black)] transition-colors">
-                $15.99 <span className="text-[1.5rem] line-through font-light">$20.99</span>
-              </div>
-              <button className="mt-[1rem] inline-block py-[0.9rem] px-[3rem] text-[1.6rem] text-white bg-[#d3ad7f] hover:tracking-[0.2rem] transition-all rounded-md shadow hover:shadow-lg hover:bg-[#c29c6d] uppercase">
-                add to cart
-                <i className="fas fa-shopping-cart ml-2"></i>
-              </button>
             </div>
           </div>
         ))}
