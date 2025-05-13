@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -21,9 +22,9 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[rgba(1,1,3,0.9)] backdrop-blur-sm flex items-center justify-between px-[7%] py-[1.5rem] border-b border-[var(--border)] fixed top-0 left-0 right-0 z-50 shadow-md">
+    <header className="bg-[rgba(1,1,3,0.9)] backdrop-blur-sm flex items-center justify-between px-[5%] sm:px-[7%] py-[1rem] sm:py-[1.5rem] border-b border-[var(--border)] fixed top-0 left-0 right-0 z-50 shadow-md">
       <Link href="/" className="logo transition-transform hover:scale-105">
-        <Image src="/images/logo.png" alt="Nosh Cafe" width={50} height={50} className="drop-shadow-lg" />
+        <Image src="/images/logo.png" alt="Nosh Cafe" width={35} height={35} className="drop-shadow-lg" />
       </Link>
 
       <nav className="hidden md:flex">
@@ -39,32 +40,21 @@ const Header = () => {
       </nav>
 
       <div className="flex items-center">
-        {/* <div 
-          className="text-white cursor-pointer text-[2.5rem] ml-[2rem] hover:text-[#d3ad7f] transition-all transform hover:rotate-12" 
-          onClick={toggleSearch}
-        >
-          <i className="fas fa-search" />
-        </div>
-        <div 
-          className="text-white cursor-pointer text-[2.5rem] ml-[2rem] hover:text-[#d3ad7f] transition-all transform hover:scale-110 relative"
-          onClick={toggleCart}
-        >
-          <i className="fas fa-shopping-cart" />
-          <span className="absolute -top-2 -right-2 bg-[#d3ad7f] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">4</span>
-        </div> */}
         <Sheet>
           <SheetTrigger asChild>
-            <div className="text-white cursor-pointer text-[2.5rem] ml-[2rem] hover:text-[var(--main-color)] md:hidden">
+            <DialogTitle>
+            <div className="text-white cursor-pointer text-[2rem] sm:text-[2.5rem] ml-[1rem] sm:ml-[2rem] hover:text-[var(--main-color)] md:hidden flex items-center justify-center w-[40px] h-[40px]">
               <i className="fas fa-bars" />
             </div>
+            </DialogTitle>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-white p-0 w-[30rem]">
-            <div className="flex flex-col h-full">
+          <SheetContent side="right" className="bg-[#13131a] p-0 w-[80%] max-w-[30rem]">
+            <div className="flex flex-col h-full pt-[2rem]">
               {["home", "about", "menu", "products", "review", "contact", "blogs"].map((item) => (
                 <Link
                   key={item}
                   href={`#${item}`}
-                  className="text-[var(--black)] block m-[1.5rem] p-[0.5rem] text-[2rem] hover:text-[var(--main-color)]"
+                  className="text-white block mx-[1.5rem] p-[0.5rem] text-[1.8rem] hover:text-[var(--main-color)] capitalize border-b border-[#ffffff1a] py-[1rem]"
                 >
                   {item}
                 </Link>
@@ -73,37 +63,6 @@ const Header = () => {
           </SheetContent>
         </Sheet>
       </div>
-
-      {/* Search Form */}
-      {/* <div className={`absolute top-[115%] right-[7%] bg-white w-[50rem] h-[5rem] flex items-center transform origin-top ${isSearchOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'} transition-all duration-300 rounded-md shadow-lg`}>
-        <input
-          type="search"
-          placeholder="search here..."
-          className="h-full w-full text-[1.6rem] text-[var(--black)] p-[1rem] lowercase"
-        />
-        <label className="cursor-pointer text-[2.2rem] mr-[1.5rem] text-[var(--black)] hover:text-[var(--main-color)]">
-          <i className="fas fa-search" />
-        </label>
-      </div> */}
-
-      {/* Cart Items Container */}
-      {/* <div className={`absolute top-[100%] ${isCartOpen ? 'right-0' : 'right-[-100%]'} h-[calc(100vh-9.5rem)] w-[35rem] bg-white p-0 px-[1.5rem] transition-all duration-300 shadow-lg overflow-y-auto`}>
-        {[1, 2, 3, 4].map((item) => (
-          <div key={item} className="relative my-[2rem] flex items-center gap-[1.5rem]">
-            <span className="absolute top-[1rem] right-[1rem] text-[2rem] cursor-pointer text-[var(--black)] hover:text-[var(--main-color)]">
-              <i className="fas fa-times" />
-            </span>
-            <Image src={`/images/cart-item-${item}.png`} alt={`Cart Item ${item}`} width={70} height={70} />
-            <div className="content">
-              <h3 className="text-[2rem] text-[var(--black)] pb-[0.5rem]">cart item 0{item}</h3>
-              <div className="text-[1.5rem] text-[var(--main-color)]">$15.99/-</div>
-            </div>
-          </div>
-        ))}
-        <Button className="w-full text-center mt-4 bg-[var(--main-color)] hover:opacity-90 text-[1.7rem] py-[0.9rem] hover:tracking-[0.2rem]">
-          checkout now
-        </Button>
-      </div> */}
     </header>
   );
 };

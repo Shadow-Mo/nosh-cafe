@@ -43,27 +43,27 @@ const MenuSection = () => {
   ];
 
   return (
-    <section id="menu" className="py-[5rem] px-[7%] bg-[var(--bg)]">
-      <h1 className="heading text-center text-white uppercase pb-[3.5rem] text-[4rem] animate-fadeIn">
+    <section id="menu" className="py-[3rem] md:py-[5rem] px-[5%] sm:px-[7%] bg-[var(--bg)]">
+      <h1 className="heading text-center text-white uppercase pb-[2rem] md:pb-[3.5rem] text-[3rem] sm:text-[3.5rem] md:text-[4rem] animate-fadeIn">
         our <span className="text-[#d3ad7f] uppercase">menu</span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] px-4">
-        {menuItems.map((item) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] sm:gap-[2rem]">
+        {menuItems.map((item, index) => (
           <div 
-            key={item} 
-            className="p-[2rem] text-center border border-[rgba(255,255,255,.3)] bg-[rgba(19,19,26,0.7)] hover:bg-white group transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl animate-slideInUp"
-            style={{animationDelay: `${item * 100}ms`}}
+            key={index} 
+            className="p-[1rem] sm:p-[1.5rem] md:p-[2rem] text-center border border-[rgba(255,255,255,.3)] bg-[rgba(19,19,26,0.7)] hover:bg-white group transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl animate-slideInUp"
+            style={{animationDelay: `${index * 100}ms`}}
           >
             <div className="p-0">
               <Image 
                 src={item.image} 
-                alt={`Menu Item ${item}`} 
+                alt={`Menu Item ${item.item}`} 
                 width={800} 
                 height={800} 
-                className="h-[25rem] object-contain mx-auto rounded-xl"
+                className="h-[24rem] sm:h-[20rem] md:h-[25rem] object-contain mx-auto rounded-xl"
               />
-              <h3 className="text-white text-[2rem] py-[1rem] group-hover:text-[var(--black)] font-semibold transition-colors">
+              <h3 className="text-white text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] py-[0.8rem] md:py-[1rem] group-hover:text-[var(--black)] font-semibold transition-colors">
                 {item.item}
               </h3>
             </div>
