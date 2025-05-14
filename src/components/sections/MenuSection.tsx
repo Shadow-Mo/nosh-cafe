@@ -9,11 +9,11 @@ const MenuSection = () => {
       image: '/images/nosh2.webp'
     },
     {
-      item: 'Herbed fish steak',
+      item: 'Herbed Chicken Steak',
       image: '/images/nosh3.webp'
     },
     {
-      item: 'Herbed fish steak with Mango shake',
+      item: 'Herbed Chicken Steak with Mango shake',
       image: '/images/nosh4.webp'
     },
     {
@@ -33,7 +33,7 @@ const MenuSection = () => {
       image: '/images/nosh6.jpg'
     },
     {
-      item: 'Kaju Mushroom Rice Bowl',
+      item: 'Mushroom Rice',
       image: '/images/nosh7.jpg'
     },
     {

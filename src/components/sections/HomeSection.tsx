@@ -13,7 +13,9 @@ const HomeSection = () => {
         <p className="text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-light leading-[1.6] sm:leading-[1.8] py-[0.8rem] md:py-[1rem] text-[#eee] max-w-[45rem] animate-slideInRight">
           Experience premium coffee and cozy ambiance at Nosh Cafe. Our artisanal brews and delicious treats will elevate your coffee experience.
         </p>
-        <Link href="https://drive.google.com/file/d/1pbDqZx_O3lWEpNvymUBJeQS9gjdPnbBp/view?usp=drive_link" className="mt-[1.5rem] md:mt-[2rem] inline-block py-[1rem] md:py-[1.2rem] px-[2.5rem] md:px-[3.5rem] text-[1.5rem] md:text-[1.7rem] text-white bg-[#d3ad7f] hover:tracking-[0.2rem] transition-all rounded-md shadow-lg hover:shadow-xl hover:bg-[#c29c6d] animate-fadeIn delay-300 uppercase font-medium">
+        <Link href="https://drive.google.com/file/d/1pbDqZx_O3lWEpNvymUBJeQS9gjdPnbBp/view?usp=drive_link" className="mt-[1.5rem] md:mt-[2rem] inline-block py-[1rem] md:py-[1.2rem] px-[2.5rem] md:px-[3.5rem] text-[1.5rem] md:text-[1.7rem] text-white bg-[#d3ad7f] hover:tracking-[0.2rem] transition-all rounded-md shadow-lg hover:shadow-xl hover:bg-[#c29c6d] animate-fadeIn delay-300 uppercase font-medium"
+          target="_blank" rel="noopener noreferrer"
+        >
           VIEW MENU
         </Link>
       </div>
