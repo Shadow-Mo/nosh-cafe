@@ -5,19 +5,19 @@ import Image from "next/image";
 const ProductsSection = () => {
   const products = [
     {
-      item: 'Panner Makhni',
+      item: 'Chocolate shake',
       image: '/images/shake.png'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Mango smoothie',
       image: '/images/shake2.png'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Lemon Iced Tea',
       image: '/images/shake3.png'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Strawberry smoothie',
       image: '/images/shake4.png'
     },
   ];

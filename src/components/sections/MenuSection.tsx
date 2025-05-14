@@ -5,39 +5,39 @@ import Image from "next/image";
 const MenuSection = () => {
   const menuItems = [
     {
-      item: 'Panner Makhni',
+      item: 'Butter Paneer Rice Bowl',
       image: '/images/nosh2.webp'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Herbed fish steak',
       image: '/images/nosh3.webp'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Herbed fish steak with Mango shake',
       image: '/images/nosh4.webp'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Pesto Paneer sandwich',
       image: '/images/sandwich.jpg'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Melting Chicken Cheese burger',
       image: '/images/burger.jpg'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Alfredo Pasta',
       image: '/images/rice.png'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Cheese Salsa Fries',
       image: '/images/nosh6.jpg'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Kaju Mushroom Rice Bowl',
       image: '/images/nosh7.jpg'
     },
     {
-      item: 'Panner Makhni',
+      item: 'Peri Peri Chicken Wings',
       image: '/images/nosh8.jpg'
     },
   ];
