@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const ReviewSection = () => {
   const reviews = [
-    { id: 1, name: "Mir Shahrear", image: "/images/sr.jpg" },
-    { id: 2, name: "Riaz Alam", image: "/images/sr2.jpg" },
-    { id: 3, name: "John Deo", image: "/images/pic-3.png" }
+    { id: 1, name: "Lalit", image: "/images/sr.avif", review: "I had a wonderful experience at Nosh The atmosphere was cozy, the staff were friendly, and the coffee and food were delicious. Highly recommend!" },
+    { id: 2, name: "Tina Varma", image: "/images/sr.avif", review: "Amazing food, great presentation, good quantity, sauce is very yummy" },
+    { id: 3, name: "Sofi", image: "/images/sr.avif", review: "Very yummy food loved it very much" }
   ];
 
   return (
@@ -32,7 +32,7 @@ const ReviewSection = () => {
                 className="quote mx-auto mb-4 sm:mb-6 opacity-60 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:scale-110"
               />
               <p className="text-[1.3rem] sm:text-[1.4rem] md:text-[1.5rem] leading-[1.6] sm:leading-[1.8] text-[#eee] py-[1.5rem] md:py-[2rem] italic">
-                &ldquo;The atmosphere at Nosh Cafe is unmatched! The baristas are skilled, attentive, and always ready to recommend something new. Their specialty coffee selection is outstanding, with beans sourced from around the world.&rdquo;
+                {review.review}
               </p>
               <div className="relative mx-auto w-[7rem] h-[7rem] sm:w-[8rem] sm:h-[8rem] md:w-[9rem] md:h-[9rem] rounded-full border-4 border-[#d3ad7f] p-1 transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
                 <Image 
