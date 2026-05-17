@@ -563,7 +563,7 @@ function Franchise() {
             ))}
           </ul>
           <p className="mt-8 text-sm text-muted-foreground">
-            Prefer email? Write to <a href="mailto:vaidyaayush19@gmail.com" className="underline underline-offset-4 hover:text-accent">vaidyaayush19@gmail.com</a>
+            Prefer email? Write to <a href="mailto:amanchaudhary@thecafenosh.com" className="underline underline-offset-4 hover:text-accent">amanchaudhary@thecafenosh.com</a>
           </p>
         </motion.div>
 
