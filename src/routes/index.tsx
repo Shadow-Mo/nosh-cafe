@@ -1,9 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { toast } from "sonner";
 import { NoshLoader } from "@/components/NoshLoader";
-import heroCoffee from "@/assets/hero-coffee.jpg";
+import heroCoffee from "@/assets/hero-coffee.jpg"
 import menuSpread from "@/assets/menu-spread.jpg";
 import burger from "@/assets/burger.jpg";
 import pasta from "@/assets/pasta.jpg";
@@ -12,23 +13,6 @@ import chicken from "@/assets/chicken.jpg";
 import beans from "@/assets/beans.jpg";
 
 const fakeSubmit = () => new Promise((resolve) => window.setTimeout(resolve, 450));
-
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Nosh Cafe — Aundh, Pune | Slow brews. Loud flavours." },
-      {
-        name: "description",
-        content:
-          "Nosh Cafe in Aundh, Pune — small-batch coffee, all-day breakfast, wood-fired pizzas and bold plates. Open 9:30 AM – 11:30 PM daily.",
-      },
-      { property: "og:title", content: "Nosh Cafe — Brewed with love in Aundh" },
-      { property: "og:description", content: "All-day breakfast, signature mains and small-batch coffee in Aundh, Pune." },
-      { property: "og:image", content: heroCoffee },
-    ],
-  }),
-});
 
 const WHATSAPP_NUMBER = "919096515432"; // 90965 15432
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Nosh! I'd like to reserve a table.")}`;
@@ -305,7 +289,7 @@ function Hero() {
           className="col-span-12 md:col-span-7 relative"
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl md:aspect-auto md:h-[min(62vh,640px)]">
-            <img src={heroCoffee} alt="A latte with delicate art on a wooden table inside Nosh Cafe" className="h-full w-full object-cover" />
+            <img src={heroCoffee.src} alt="A latte with delicate art on a wooden table inside Nosh Cafe" className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent" />
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }}
@@ -417,7 +401,7 @@ function About() {
           className="relative"
         >
           <div className="relative overflow-hidden rounded-[2rem] shadow-2xl animate-float">
-            <img src={beans} alt="Coffee beans being poured" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+            <img src={beans.src} alt="Coffee beans being poured" className="aspect-[4/5] w-full object-cover" loading="lazy" />
           </div>
           <div className="absolute -bottom-6 -right-2 hidden rounded-2xl bg-primary px-7 py-5 text-primary-foreground md:block">
             <div className="font-display text-3xl">Brewed in<br />Aundh</div>
@@ -448,10 +432,10 @@ function About() {
 
 function Menu() {
   const featured = [
-    { name: "Herbed Chicken Steak", desc: "Pan-seared, fresh herbs, signature jus.", img: chicken, tag: "Signature" },
-    { name: "Melting Cheese Burger", desc: "Smash patty, three-cheese melt, brioche.", img: burger, tag: "Bestseller" },
-    { name: "Alfredo Pasta", desc: "Slow-cooked cream, parmesan, cracked pepper.", img: pasta, tag: "Classic" },
-    { name: "Mango Smoothie", desc: "Alphonso pulp, hand-churned, garden mint.", img: smoothie, tag: "Fresh" },
+    { name: "Herbed Chicken Steak", desc: "Pan-seared, fresh herbs, signature jus.", img: chicken.src, tag: "Signature" },
+    { name: "Melting Cheese Burger", desc: "Smash patty, three-cheese melt, brioche.", img: burger.src, tag: "Bestseller" },
+    { name: "Alfredo Pasta", desc: "Slow-cooked cream, parmesan, cracked pepper.", img: pasta.src, tag: "Classic" },
+    { name: "Mango Smoothie", desc: "Alphonso pulp, hand-churned, garden mint.", img: smoothie.src, tag: "Fresh" },
   ];
 
   return (
@@ -777,7 +761,7 @@ function Footer() {
   );
 }
 
-function Index() {
+export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <NoshLoader />
